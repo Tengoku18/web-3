@@ -1,18 +1,6 @@
 "use client";
 
-/**
- * WalletConnectButton Component
- *
- * A button component for connecting and disconnecting MetaMask wallet.
- * Displays different states based on connection status.
- *
- * Features:
- * - Connect wallet button when disconnected
- * - Truncated address display when connected
- * - Copy address to clipboard
- * - Loading state during connection
- * - Disconnect functionality
- */
+
 
 import React, { useState } from "react";
 import { truncateAddress, copyToClipboard } from "@/lib/ethereum";
@@ -29,14 +17,6 @@ import { useToast } from "./Toast";
  * @param props.isLoading - Whether a connection is in progress
  * @param props.address - Connected wallet address (null if disconnected)
  *
- * @example
- * <WalletConnectButton
- *   onConnect={handleConnect}
- *   onDisconnect={handleDisconnect}
- *   isConnected={walletState.isConnected}
- *   isLoading={walletState.isLoading}
- *   address={walletState.address}
- * />
  */
 export default function WalletConnectButton({
   onConnect,

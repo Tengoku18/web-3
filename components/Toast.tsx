@@ -1,19 +1,5 @@
 "use client";
 
-/**
- * Toast Notification System
- *
- * Provides a context-based toast notification system for displaying
- * success, error, warning, and info messages to users.
- *
- * Features:
- * - Multiple toast types with distinct styling
- * - Auto-dismiss after configurable duration
- * - Manual dismiss support
- * - Smooth animations
- * - Accessible design
- */
-
 import React, {
   createContext,
   useContext,

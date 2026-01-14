@@ -1,20 +1,5 @@
 "use client";
 
-/**
- * Main Dashboard Page
- *
- * The primary page of the Wallet Connection Dashboard application.
- * Integrates all Web3 functionality including wallet connection,
- * network detection, and account information display.
- *
- * Features:
- * - Wallet connection/disconnection
- * - Real-time balance updates
- * - Network status and switching
- * - Event handling for account and network changes
- * - Error handling with toast notifications
- */
-
 import React, { useEffect, useState, useCallback } from "react";
 import {
   isMetaMaskInstalled,
@@ -33,12 +18,6 @@ import AccountInfo from "@/components/AccountInfo";
 import SendTransaction from "@/components/SendTransaction";
 import { useToast } from "@/components/Toast";
 
-/**
- * Dashboard Page Component
- *
- * Main entry point for the wallet connection dashboard.
- * Manages wallet state and coordinates between components.
- */
 export default function Dashboard() {
   const [walletState, setWalletState] = useState<WalletState>(INITIAL_WALLET_STATE);
   const [isMetaMaskAvailable, setIsMetaMaskAvailable] = useState<boolean | null>(null);

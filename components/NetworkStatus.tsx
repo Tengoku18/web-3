@@ -1,17 +1,5 @@
 "use client";
 
-/**
- * NetworkStatus Component
- *
- * Displays the current blockchain network status and provides
- * functionality to switch to the Sepolia testnet.
- *
- * Features:
- * - Current network display with status badge
- * - Warning banner when not on Sepolia
- * - Network switch button
- * - Loading state during network switch
- */
 
 import React, { useState } from "react";
 import { getNetworkName, isSepoliaNetwork } from "@/lib/ethereum";
@@ -25,12 +13,6 @@ import type { NetworkStatusProps } from "@/types/web3";
  * @param props.onSwitchNetwork - Callback function to switch to Sepolia
  * @param props.isLoading - Whether a network switch is in progress
  *
- * @example
- * <NetworkStatus
- *   chainId={walletState.chainId}
- *   onSwitchNetwork={handleSwitchNetwork}
- *   isLoading={isNetworkSwitching}
- * />
  */
 export default function NetworkStatus({
   chainId,

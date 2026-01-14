@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/**
- * Global Styles for Wallet Connection Dashboard
- *
- * This file contains:
- * - Tailwind CSS directives
- * - Custom CSS variables
- * - Base layer resets
- * - Custom utility classes
- * - Animation definitions
- */
-
 /* Custom CSS Variables */
 :root {
   --background: #111827;
@@ -29,7 +18,6 @@
     scroll-behavior: smooth;
   }
 
-  /* Remove default focus outlines and add custom ones */
   *:focus {
     outline: none;
   }
@@ -46,7 +34,6 @@
     color: #fff;
   }
 
-  /* Scrollbar styling for dark theme */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;

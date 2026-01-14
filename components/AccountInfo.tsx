@@ -1,17 +1,5 @@
 "use client";
 
-/**
- * AccountInfo Component
- *
- * Displays connected wallet account information including
- * the full address and ETH balance.
- *
- * Features:
- * - Full wallet address display
- * - ETH balance with formatting
- * - Loading skeleton states
- * - Etherscan link to view address
- */
 
 import React from "react";
 import type { AccountInfoProps } from "@/types/web3";

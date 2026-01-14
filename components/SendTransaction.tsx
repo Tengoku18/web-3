@@ -1,20 +1,5 @@
 "use client";
 
-/**
- * SendTransaction Component
- *
- * A form component for sending ETH to another address on the Ethereum network.
- * Handles the complete transaction lifecycle from input validation to confirmation.
- *
- * Features:
- * - Recipient address input with validation
- * - ETH amount input with validation
- * - Real-time form validation
- * - Transaction state management (idle -> sending -> pending -> confirmed/failed)
- * - Transaction hash display with Etherscan link
- * - Comprehensive error handling
- */
-
 import React, { useState, useCallback } from "react";
 import {
   isValidAddress,
@@ -39,11 +24,6 @@ import { useToast } from "./Toast";
  * @param props.isConnected - Whether wallet is connected
  * @param props.onTransactionComplete - Optional callback after successful transaction
  *
- * @example
- * <SendTransaction
- *   isConnected={walletState.isConnected}
- *   onTransactionComplete={refreshBalance}
- * />
  */
 export default function SendTransaction({
   isConnected,
