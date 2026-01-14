@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="url(#bg)"/>
+  <!-- Wallet icon scaled -->
+  <path d="M45 62C45 56.4772 49.4772 52 55 52H125C130.523 52 135 56.4772 135 62V74H45V62Z" fill="white" fill-opacity="0.9"/>
+  <path d="M45 74H135V118C135 123.523 130.523 128 125 128H55C49.4772 128 45 123.523 45 118V74Z" fill="white" fill-opacity="0.9"/>
+  <!-- Card slot -->
+  <rect x="101" y="90" width="34" height="22" rx="4" fill="url(#bg)"/>
+  <!-- Ethereum diamond -->
+  <path d="M118 95L124 103L118 108L112 103L118 95Z" fill="white" fill-opacity="0.8"/>
+</svg>

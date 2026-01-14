@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Global Styles for Wallet Connection Dashboard
+ *
+ * This file contains:
+ * - Tailwind CSS directives
+ * - Custom CSS variables
+ * - Base layer resets
+ * - Custom utility classes
+ * - Animation definitions
+ */
+
+/* Custom CSS Variables */
+:root {
+  --background: #111827;
+  --foreground: #f9fafb;
+  --muted: #6b7280;
+  --border: #374151;
+  --accent: #3b82f6;
+}
+
+/* Base layer customizations */
+@layer base {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Remove default focus outlines and add custom ones */
+  *:focus {
+    outline: none;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.3);
+    color: #fff;
+  }
+
+  /* Scrollbar styling for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1f2937;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+  }
+}
+
+/* Component layer for reusable patterns */
+@layer components {
+  /* Card component */
+  .card {
+    @apply bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl font-semibold text-white
+           bg-gradient-to-r from-blue-600 to-purple-600
+           hover:from-blue-500 hover:to-purple-500
+           hover:shadow-lg hover:shadow-purple-500/25
+           active:scale-[0.98] transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-xl font-medium
+           bg-gray-700 text-gray-200 border border-gray-600
+           hover:bg-gray-600 hover:border-gray-500
+           active:scale-[0.98] transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 rounded-xl font-medium
+           bg-red-600/20 text-red-400 border border-red-600/30
+           hover:bg-red-600/30 hover:border-red-500/50
+           transition-all duration-200;
+  }
+
+  /* Status badges */
+  .badge {
+    @apply px-2 py-0.5 text-xs font-medium rounded-full;
+  }
+
+  .badge-success {
+    @apply badge bg-green-500/20 text-green-400;
+  }
+
+  .badge-warning {
+    @apply badge bg-yellow-500/20 text-yellow-400;
+  }
+
+  .badge-error {
+    @apply badge bg-red-500/20 text-red-400;
+  }
+
+  .badge-info {
+    @apply badge bg-blue-500/20 text-blue-400;
+  }
+
+  /* Input styles */
+  .input {
+    @apply w-full px-4 py-2 bg-gray-900/50 border border-gray-700
+           rounded-lg text-white placeholder-gray-500
+           focus:border-blue-500 focus:ring-1 focus:ring-blue-500
+           transition-colors duration-200;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    @apply bg-gray-700 rounded animate-pulse;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
+  }
+}
+
+/* Utility layer for custom utilities */
+@layer utilities {
+  /* Hide scrollbar utility */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-gray-800/30 backdrop-blur-md border border-gray-700/50;
+  }
+
+  /* Glow effects */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+
+  /* Text shadow for emphasis */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Animation delays */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  }
+}
+
+/* Apply animations to classes */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  /* Increase tap targets on mobile */
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
